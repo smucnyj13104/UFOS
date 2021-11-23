@@ -66,21 +66,21 @@ function updateFilters() {
 
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-    for (var filterID in filters){
-        if (filterID === "datetime") {
+    for (var filter_ID in filters){
+        if (filter_ID === "datetime") {
             filteredData = filteredData.filter(row => row.datetime === date);
         }
-        else if (filterID === "city") {
+        else if (filter_ID === "city") {
             filteredData = filteredData.filter(row => row.city === city);
         }
-        else if (filterID === "state") {
+        else if (filter_ID === "state") {
             filteredData = filteredData.filter(row => row.state === state);
         }
-        else if (filterID === "country") {
+        else if (filter_ID === "country") {
             filteredData = filteredData.filter(row => row.country === country);
         }
-            else if (filterID === "shape") {
-                filteredData = filteredData.filter(row => row.shape === shape);
+        else if (filter_ID === "shape") {
+            filteredData = filteredData.filter(row => row.shape === shape);
         } 
     };
     // 10. Finally, rebuild the table using the filtered data
